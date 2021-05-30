@@ -124,3 +124,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 05-matplotlib.md
+pymaceuticals_starter.ipynb
