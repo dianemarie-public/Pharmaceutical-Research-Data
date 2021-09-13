@@ -20,18 +20,18 @@ df = pd.merge(tumor_data, metadata, how="left", on="Mouse ID")
 df
 
 mean = df.groupby('Drug Regimen').mean()['Tumor Volume (mm3)']
-# mean_vol
+mean
 
 median = df.groupby('Drug Regimen').mean()['Tumor Volume (mm3)']
 variance = df.groupby('Drug Regimen').median()['Tumor Volume (mm3)']
 std_dev = df.groupby('Drug Regimen').var()['Tumor Volume (mm3)']
 sem = df.groupby('Drug Regimen').sem()['Tumor Volume (mm3)']
 
-table = pd.DataFrame({'mean': mean, 'median': median, 'variance': variance, 'standard deviation': std_dev, 'sem': sem})
+table = pd.DataFrame({'mean': mean, 'median': median, 'variance': variance, 'std_dev': std_dev, 'sem': sem})
 table
 
+df['Drug Regimen'].value_counts()
 
+num_mice = df['Drug Regimen'].value_counts()
 
-id = np.arange(len(id))
-
-plt.bar(regimen, id)
+num_mice.plot(kind="bar")
