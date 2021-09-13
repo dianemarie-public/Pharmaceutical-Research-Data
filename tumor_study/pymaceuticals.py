@@ -20,7 +20,7 @@ df = pd.merge(tumor_data, metadata, how="left", on="Mouse ID")
 df
 
 mean = df.groupby('Drug Regimen').mean()['Tumor Volume (mm3)']
-mean
+# mean
 
 median = df.groupby('Drug Regimen').mean()['Tumor Volume (mm3)']
 variance = df.groupby('Drug Regimen').median()['Tumor Volume (mm3)']
