@@ -2,13 +2,21 @@
 
 **Background**
 
-Project story.
+Project story:
 
 **Project Scope**
 
-Project plan and tasks.
-- Load datasets ![load](load.png)
-- Merge datasets ![merge](merge.png)
+Project plan and tasks:
+
+1. Load datasets 
+
+    ![load](load.png)**
+
+Merge datasets ![merge](merge.png)
+
+Count of mice by drug regimen ![count](count.png) 
+
+Histogram ![histogram](hist.png)
 
 **Analysis**
 
