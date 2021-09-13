@@ -8,6 +8,7 @@ Project story.
 
 Project plan and tasks.
 - Load datasets ![load](load.png)
+- Merge datasets ![merge](merge.png)
 
 **Analysis**
 
