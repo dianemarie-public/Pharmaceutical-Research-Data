@@ -8,9 +8,9 @@ Project story:
 
 Project plan and tasks:
 
-1. Load datasets 
+Load datasets 
 
-    ![load](load.png)**
+![load](load.png)
 
 Merge datasets ![merge](merge.png)
 
@@ -21,10 +21,10 @@ Histogram ![histogram](hist.png)
 **Analysis**
 
 Project statistics.
-
+<!-- 
 |Table|Col1|Col2|
 |----|----|----|
-|1|2|3|4|
+|1|2|3|4| -->
 
 **Findings**
 
