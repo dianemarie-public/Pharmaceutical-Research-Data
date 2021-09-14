@@ -50,3 +50,12 @@ sex_count = df.Sex.value_counts()
 df.Sex.unique()
 sex = df.Sex.unique()
 plt.pie(sex_count.values, labels=sex, autopct='%1.1f%%')
+
+#  final tumor volume of each mouse across the top 4  drug drug_regimens
+final_volume = df.loc[df['Timepoint'] == 45].reset_index()
+final_volume
+
+final = df.loc[df['Timepoint'] == 45].reset_index()
+final = final[['Mouse ID', 'Drug Regimen', 'Tumor Volume (mm3)']]
+final = final[(final['Drug Regimen'] == "Capomulin") | (final['Drug Regimen'] == 'Ramicane') | (final['Drug Regimen'] == 'Infubinol') | (final['Drug Regimen'] == 'Ceftamin')].reset_index()
+final
