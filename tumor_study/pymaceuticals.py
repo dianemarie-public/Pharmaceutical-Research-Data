@@ -31,15 +31,22 @@ table
 
 df['Drug Regimen'].value_counts()
 
+# histogram/bar chart using pandas
 num_mice = df['Drug Regimen'].value_counts()
 num_mice.plot(kind="bar")
 
-# histogram/bar chart using pyplot
-x_axis = np.arange(len(num_mice))
-
-# create ticks for plot ()
+# histogram/bar chart using matplotlib
 ticks = [value for value in x_axis]
 drug_regimens = df['Drug Regimen'].unique()
 
 # create plot
 plt.xticks(ticks, drug_regimens)
+
+plt.pie(num_mice, labels=drug_regimens)
+df.Sex.value_counts()
+
+df.Sex.value_counts()
+sex_count = df.Sex.value_counts()
+df.Sex.unique()
+sex = df.Sex.unique()
+plt.pie(sex_count.values, labels=sex, autopct='%1.1f%%')
