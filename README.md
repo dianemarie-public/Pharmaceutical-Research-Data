@@ -10,9 +10,10 @@ Project plan and tasks:
 
 Load datasets:
 - Read the data files into pandas:
-
+    
         read_csv('data/Study_results.csv')
         read_csv('data/mouse_metadata.csv')
+
 - Count of nonduplicate Mouse Ids:
 
         len(tumor_data['Mouse ID'].unique())
@@ -22,12 +23,13 @@ Load datasets:
 
     ![load](Images/load.png)
 
-Merge the two datasets and save as a new dataframe:
-- Adds the metadata for each Mouse ID to the tumor volume study data.
+- Merge the two datasets and save as a new dataframe by adding the metadata for each Mouse ID to the tumor volume study data.
 
-        df = pd.merge(tumor_data, metadata, how="left", on="Mouse Id")
+    ```
+    df = pd.merge(tumor_data, metadata, how="left", on="Mouse Id")
+    ```
 
-    ![merge](Images/merge.png)
+![merge](Images/merge.png)
 
 Count mice by drug regimen:
 
@@ -43,9 +45,8 @@ Histogram using pandas
 
 Histogram using matplotlib
 
-        x_axis = np.arange(len(num_mice))
-        drug_regimens = df['Drug Regimen'].unique()
         ticks = [value for value in x_axis]
+        drug_regimens = df['Drug Regimen'].unique()
         plt.xticks(ticks, drug_regimens)
 
 ![histogram](Images/pyplot.png)
@@ -59,8 +60,7 @@ Summary statistics.
         variance = df.groupby('Drug Regimen').median()['Tumor Volume (mm3)']
         std_dev = df.groupby('Drug Regimen').var()['Tumor Volume (mm3)']
         sem = df.groupby('Drug Regimen').sem()['Tumor Volume (mm3)']
-        table = pd.DataFrame(
-            {'mean': mean, 'median': median, 'variance': variance, 'std_dev': std_dev, 'sem': sem})
+        table = pd.DataFrame({'mean': mean, 'median': median, 'variance': variance, 'std_dev': std_dev, 'sem': sem})
 
 ![histogram](Images/stats.png)
 
