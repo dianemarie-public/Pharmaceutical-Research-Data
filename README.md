@@ -10,13 +10,13 @@ Project plan and tasks:
 
 Load datasets 
 
-![load](load.png)
+![load](Images/load.png)
 
-Merge datasets ![merge](merge.png)
+Merge datasets ![merge](Images/merge.png)
 
-Count of mice by drug regimen ![count](count.png) 
+Count of mice by drug regimen ![count](Images/count.png) 
 
-Histogram ![histogram](hist.png)
+Histogram ![histogram](Images/hist.png)
 
 **Analysis**
 
