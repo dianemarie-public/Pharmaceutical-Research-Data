@@ -20,14 +20,13 @@ df = pd.merge(tumor_data, metadata, how="left", on="Mouse ID")
 df
 
 mean = df.groupby('Drug Regimen').mean()['Tumor Volume (mm3)']
-# mean
-
 median = df.groupby('Drug Regimen').mean()['Tumor Volume (mm3)']
 variance = df.groupby('Drug Regimen').median()['Tumor Volume (mm3)']
 std_dev = df.groupby('Drug Regimen').var()['Tumor Volume (mm3)']
 sem = df.groupby('Drug Regimen').sem()['Tumor Volume (mm3)']
 
-table = pd.DataFrame({'mean': mean, 'median': median, 'variance': variance, 'std_dev': std_dev, 'sem': sem})
+table = pd.DataFrame(
+    {'mean': mean, 'median': median, 'variance': variance, 'std_dev': std_dev, 'sem': sem})
 table
 
 df['Drug Regimen'].value_counts()
@@ -37,11 +36,10 @@ num_mice.plot(kind="bar")
 
 # histogram/bar chart using pyplot
 x_axis = np.arange(len(num_mice))
-plt.bar(x_axis, num_mice)
-#  create ticks
 
-df['Drug Regimen'].unique()
+# create ticks for plot ()
+ticks = [value for value in x_axis]
 drug_regimens = df['Drug Regimen'].unique()
 
-ticks = [value for value in x_axis]
+# create plot
 plt.xticks(ticks, drug_regimens)
