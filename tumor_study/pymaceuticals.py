@@ -38,3 +38,10 @@ num_mice.plot(kind="bar")
 # histogram/bar chart using pyplot
 x_axis = np.arange(len(num_mice))
 plt.bar(x_axis, num_mice)
+#  create ticks
+
+df['Drug Regimen'].unique()
+drug_regimens = df['Drug Regimen'].unique()
+
+ticks = [value for value in x_axis]
+plt.xticks(ticks, drug_regimens)
