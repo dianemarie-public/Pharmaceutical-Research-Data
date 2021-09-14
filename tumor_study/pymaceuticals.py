@@ -33,5 +33,8 @@ table
 df['Drug Regimen'].value_counts()
 
 num_mice = df['Drug Regimen'].value_counts()
-
 num_mice.plot(kind="bar")
+
+# histogram/bar chart using pyplot
+x_axis = np.arange(len(num_mice))
+plt.bar(x_axis, num_mice)
